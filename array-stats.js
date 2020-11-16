@@ -14,12 +14,12 @@ class ArrayStats {
   
     if (values.length % 2)
       return values[half];
-  
+ 
     return (values[half - 1] + values[half]) / 2.0;
   }
 
   min(values) {
-    return values.reduce((min, val) => val < min ? val : min, A[0]);
+    return values.reduce((min, val) => val < min ? val : min, this.average(values));
   }
 
   max(values) {
