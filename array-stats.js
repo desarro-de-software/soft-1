@@ -19,7 +19,7 @@ class ArrayStats {
   }
 
   min(values) {
-    return values.reduce((min, val) => val < min ? val : min, A[0]);
+    return values.reduce((min, val) => val < min ? val : min, this.average(values));
   }
 
   max(values) {
