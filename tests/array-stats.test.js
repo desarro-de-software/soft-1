@@ -19,7 +19,7 @@ describe('tests for ArrayStats class', () => {
     expect(mediann).toBe("12");
   });
 
-  test('test median string', () => {
+  test('test median string and numbers', () => {
     const mediann = arrayStats.median(['aaaaa',2,'12',4]);
     expect(mediann).toBe(3);
   });
