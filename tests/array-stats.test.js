@@ -10,11 +10,6 @@ describe('tests for ArrayStats class', () => {
     const average = arrayStats.average([1,2,2,3,1,2,2,1,3,3]);
     expect(average).toBe(2);
   });
-
-  test('test average string', () => {
-    const average = arrayStats.average(["17","no se que onda",""]);
-    expect(average).toBe(NaN);
-  });
   
   test('test min empty array', () => {
     const min2 = arrayStats.min([]);
