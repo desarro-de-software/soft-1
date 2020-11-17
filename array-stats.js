@@ -23,7 +23,7 @@ class ArrayStats {
   }
 
   max(values) {
-    return values.reduce((max, val) => val > max ? val : max, this.average(values));
+    return values.reduce((max, val) => val > max ? val : max, values[0]);
   }
 
 }
