@@ -37,9 +37,4 @@ describe('tests for ArrayStats class', () => {
     const min2 = arrayStats.min([]);
     expect(min2).toBeUndefined;
   });
-
-  test('test min string array', () => {
-    const min2 = arrayStats.min(["a","0","12","string","23","-1","bla"]);
-    expect(min2).toBe(NaN)
-  });
 });
