@@ -77,15 +77,15 @@ describe('tests for ArrayStats class', () => {
     const average = arrayStats.average(["17","no se que onda",""]);
     expect(average).toBe(NaN);
   });
-
-  test('test max', () => {
-    const max = arrayStats.max([5,8,10]);
-    expect(max).toBe(10);
+  
+  test('test average empty', () => {
+    const average = arrayStats.average([]);
+    expect(average).toBeUndefined;
   });
 
-  test('test max empty', () => {
-    const max = arrayStats.max([]);
-    expect(max).toBeUndefined;
+  test('test max', () => {
+    const max = arrayStats.max([5,8,10,2,4,1,7]);
+    expect(max).toBe(10);
   });
 
   test('test max string', () => {
@@ -93,5 +93,9 @@ describe('tests for ArrayStats class', () => {
     expect(max).toBe(NaN);
   });
 
+  test('test max empty', () => {
+    const max = arrayStats.max([]);
+    expect(max).toBeUndefined;
+  });
 
 });
