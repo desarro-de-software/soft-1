@@ -6,9 +6,13 @@ describe('tests for ArrayStats class', () => {
   test('test min happy case', () => {
     const min1 = arrayStats.min([6,232,256,3,12,26,24,1234,7,98]);
     expect(min1).toBe(3);
+  });
+
   test('test average', () => {
     const average = arrayStats.average([1,2,2,3,1,2,2,1,3,3]);
     expect(average).toBe(2);
+  });
+
   test('test min happy case', () => {
     const min1 = arrayStats.min([6,232,256,3,12,26,24,1234,7,98]);
     expect(min1).toBe(3);
@@ -23,6 +27,7 @@ describe('tests for ArrayStats class', () => {
     const min2 = arrayStats.min([]);
     expect(min2).toBeUndefined;
   });
+
   test('test average empty', () => {
     const average = arrayStats.average([]);
     expect(average).toBeUndefined;
@@ -43,8 +48,4 @@ describe('tests for ArrayStats class', () => {
     expect(min2).toBeUndefined;
   });
 
-  test('test min string array', () => {
-    const min2 = arrayStats.min(["a","0","12","string","23","-1","bla"]);
-    expect(min2).toBe(NaN)
-  });
 });
